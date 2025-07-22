@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Shared on THEMELOCK.COM - Dentia — Dentist & Dental Clinic Website Template</title>
-    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <title>Contact Us | Sara Mahal</title>
+    <link rel="icon" href="images/faviconsaramahal.png" type="image/png" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
     <meta content="Dentia — Dentist & Dental Clinic Website Template" name="description" >
@@ -29,7 +29,7 @@
         <!-- preloader end -->
 
         <!-- header begin -->
-        <header class="transparent header-light">
+        <header class="transparent scroll-light header-light">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -74,12 +74,48 @@
             </div>
         </header>
         <!-- header end -->
+        <!-- overlay content begin -->
+        <div id="extra-wrap" class="text-light">
+            <div id="btn-close">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="extra-content">
+                <img src="images/icon.png" class="w-150px" alt="">
+                <div class="spacer-30-line"></div>
+                <h5>Our Services</h5>
+                <ul class="ul-check">
+                    <li><a href="#" class="service-popup" data-service="event-management">Event Management</a></li>
+                    <li><a href="#" class="service-popup" data-service="catering">Catering</a></li>
+                    <li><a href="#" class="service-popup" data-service="decoration">Decoration</a></li>
+                    <li><a href="#" class="service-popup" data-service="celebrant">Celebrant Services</a></li>
+                    <li><a href="#" class="service-popup" data-service="photography">Photography</a></li>
+                    <li><a href="#" class="service-popup" data-service="priest">Priest Arrangements</a></li>
+                </ul>
+                <div class="spacer-30-line"></div>
+                <h5>Contact Us</h5>
+                <div><i class="icofont-clock-time me-2 op-5"></i>By Booking Only</div>
+                <div><i class="icofont-location-pin me-2 op-5"></i>Sara Mahal, Kinathukadavu, Coimbatore</div>
+                <div><i class="icofont-envelope me-2 op-5"></i>info@saramahal.com</div>
+                <div class="spacer-30-line"></div>
+                <h5>About Us</h5>
+                <p>At Sara Mahal, we’re dedicated to providing high-quality, personalized event experiences. Our skilled team uses modern amenities to ensure comfortable, efficient, and beautiful celebrations for life's most important moments.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- overlay content close -->
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
 
             <div id="top"></div>
 
-            <section id="subheader" class="bg-color-op-1 text-light" data-bgimage="url(images/background/4.png)">
+            <section id="subheader" class="bg-color-op-1 text-light" data-bgimage="url(images/background/1.webp)">
                 <div class="container relative z-2">
                     <div class="row align-items-center">
                         <div class="col-lg-12">
@@ -120,7 +156,7 @@
                                 <i class="fs-40 id-color icofont-phone mb-3" style="color: #FF5733;"></i>
                                 <div class="text-dark">
                                     <h5 class="mb-1">Phone / WhatsApp</h5>
-                                    <p class="mb-0">+91 98765 43210</p>
+                                    <p class="mb-0">+91 9486588288</p>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +166,7 @@
                                 <i class="fs-40 id-color icofont-envelope mb-3" style="color: #FF5733;"></i>
                                 <div class="text-dark">
                                     <h5 class="mb-1">Email</h5>
-                                    <p class="mb-0">info@saramaahal.com</p>
+                                    <p class="mb-0">info@saramahal.com</p>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +178,9 @@
                         <div class="col-lg-6 offset-lg-3">
                             <div class="p-40 bg-color-op-1 rounded-1">
                                 <h3 class="text-center">Send Us a Message</h3>
-                                <form name="contactForm" id="contact_form" method="post" action="contact.php">
+                                <form name="contactForm" id="contact_form" method="POST">
+                                    <input type="hidden" name="access_key" value="a322e410-575f-4359-83d2-02ce8178325c">
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                                     <div class="mb-3">
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
@@ -174,15 +212,9 @@
                                     </div>
 
                                     <div id='submit' class="mt-20 text-center">
-                                        <input type='submit' id='send_message' value='Send Message' class="btn-main">
+                                        <button type='submit' id='send_message' class="btn-main">Send Message</button>
                                     </div>
-
-                                    <div id="success_message" class='success'>
-                                        Your message has been sent successfully. Refresh this page if you want to send more messages.
-                                    </div>
-                                    <div id="error_message" class='error'>
-                                        Sorry there was an error sending your form.
-                                    </div>
+                                    <div id="result"></div>
                                 </form>
                             </div>
                         </div>
@@ -239,7 +271,7 @@
 
             <section class="no-top">
                 <div id="map-cook" class="gmap-2">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.239922241641!2d77.02078631480082!3d10.793211992310156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859556ac5f69f%3A0x9f79b35041a7747!2sSara%20Mahal!5e0!3m2!1sen!2sin!4v1676641882672!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3918.4942909563288!2d77.01191367504292!3d10.849959289303293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDUwJzU5LjkiTiA3N8KwMDAnNTIuMiJF!5e0!3m2!1sen!2sin!4v1753163583087!5m2!1sen!2sin" width="100%" height="60vh" style="border:0;display:block;min-height:350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
 
@@ -282,12 +314,12 @@
                                 <div class="widget">
                                     <h5>Our Services</h5>
                                     <ul>
-                                        <li><a href="about.html">Event Management</a></li>
-                                        <li><a href="about.html">Catering</a></li>
-                                        <li><a href="about.html">Decoration</a></li>
-                                        <li><a href="about.html">Celebrant Services</a></li>
-                                        <li><a href="about.html">Photography</a></li>
-                                        <li><a href="about.html">Priest Arrangements</a></li>
+                                        <li><a href="#" class="service-popup" data-service="event-management">Event Management</a></li>
+                                        <li><a href="#" class="service-popup" data-service="catering">Catering</a></li>
+                                        <li><a href="#" class="service-popup" data-service="decoration">Decoration</a></li>
+                                        <li><a href="#" class="service-popup" data-service="celebrant">Celebrant Services</a></li>
+                                        <li><a href="#" class="service-popup" data-service="photography">Photography</a></li>
+                                        <li><a href="#" class="service-popup" data-service="priest">Priest Arrangements</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -302,12 +334,12 @@
                             <div class="spacer-20"></div>
 
                             <div class="fw-bold text-white"><i class="icofont-phone me-2 id-color"></i>Call Us</div>
-                            +91 98765 43210
+                            +91 9486588288
 
                             <div class="spacer-20"></div>
 
                             <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color"></i>Send a Message</div>
-                            info@saramaahal.com                            
+                            info@saramahal.com                            
                         </div>
                     </div>
                 </div>
@@ -318,11 +350,11 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2024 - Sara Mahal by Redlitmus Communications India Pvt Ltd
+                                    Copyright 2025 - Sara Mahal by Redlitmus Communications India Pvt Ltd
                                 </div>
                                 <ul class="menu-simple">
-                                    <li><a href="#">Terms &amp; Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -336,10 +368,157 @@
     
     <!-- Javascript Files
     ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/swiper.js"></script>
-    <script src="js/validation-contact.js"></script>
+    <!-- <script src="js/validation-contact.js"></script> -->
+    <script>
+const form = document.getElementById('contact_form');
+const result = document.getElementById('result');
+const submitBtn = document.getElementById('send_message');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = 'Sending...';
+  result.style.display = 'block';
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+      result.innerHTML = "Form submitted successfully";
+    } else {
+      result.innerHTML = json.message;
+    }
+  })
+  .catch(error => {
+    result.innerHTML = "Something went wrong!";
+  })
+  .then(function() {
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+    setTimeout(() => {
+      result.style.display = "none";
+    }, 3000);
+  });
+});
+</script>
+
+<!-- Service Modal -->
+<div id="service-modal" class="service-modal">
+  <div class="service-modal-content-modern">
+    <span class="service-modal-close">&times;</span>
+    <div class="service-modal-flex">
+      <div class="service-modal-image-col">
+        <img id="service-modal-image" src="" alt="Service Image" class="service-modal-main-image-modern">
+      </div>
+      <div class="service-modal-content-col">
+        <div class="service-modal-icon-title">
+          <img id="service-modal-icon" src="" alt="Service Icon" class="service-modal-icon">
+          <h3 id="service-modal-title"></h3>
+        </div>
+        <p id="service-modal-desc"></p>
+        <a id="service-modal-cta" href="contact.html" class="btn-main mt-3" style="display:inline-block;">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.service-modal { display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; }
+.service-modal-content-modern { background:#fff; color:#222; border-radius:24px; max-width:900px; margin:40px auto; padding:0; position:relative; box-shadow:0 12px 48px rgba(0,0,0,0.25); overflow:hidden; }
+.service-modal-close { position:absolute; top:22px; right:36px; font-size:2.2rem; color:#888; cursor:pointer; z-index:2; transition:color 0.2s; }
+.service-modal-close:hover { color:#ff5733; }
+.service-modal-flex { display:flex; flex-direction:row; min-height:380px; }
+.service-modal-image-col { flex:1.2; background:#f7f7f7; display:flex; align-items:stretch; justify-content:center; min-width:320px; min-height:380px; }
+.service-modal-main-image-modern { width:100%; height:100%; object-fit:cover; border-radius:0 0 0 24px; }
+.service-modal-content-col { flex:2; padding:48px 40px 40px 40px; display:flex; flex-direction:column; justify-content:center; }
+.service-modal-icon-title { display:flex; align-items:center; gap:20px; margin-bottom:18px; }
+.service-modal-icon { width:56px; height:56px; }
+#service-modal-title { font-size:2.1rem; margin:0; font-weight:700; }
+#service-modal-desc { font-size:1.18rem; margin:22px 0 0 0; line-height:1.8; }
+#service-modal-cta { margin-top:32px; font-size:1.18rem; padding:14px 38px; border-radius:10px; }
+@media (max-width:1000px) { .service-modal-content-modern { max-width:99vw; } .service-modal-flex { min-height:260px; } .service-modal-content-col { padding:28px 10px 18px 10px; } }
+@media (max-width:700px) { .service-modal-content-modern { max-width:99vw; } .service-modal-flex { flex-direction:column; min-height:unset; } .service-modal-image-col { min-width:100%; min-height:180px; } .service-modal-main-image-modern { border-radius:24px 24px 0 0; } }
+.gmap-2 iframe {
+  width: 100% !important;
+  min-height: 60vh;
+  display: block;
+  border: 0;
+}
+</style>
+<script>
+ const serviceData = {
+      'event-management': {
+        title: 'Event Management',
+        desc: 'Sara Mahal offers comprehensive event management services in Coimbatore, specializing in weddings, engagements, puberty ceremonies, and more. Our expert team handles every detail, from initial planning and vendor coordination to on-the-day execution, ensuring a seamless and memorable celebration for you and your guests. Trust us to bring your vision to life with professionalism and creativity.',
+        icon: 'images/icons/4.png',
+        image: 'images/gallery/tred (646)aaaaaaaaaaaa.webp'
+      },
+      'catering': {
+        title: 'Catering',
+        desc: 'Delight your guests with our authentic South Indian catering services. We provide a wide range of traditional and contemporary menu options, prepared by experienced chefs using the freshest ingredients. Whether it’s a grand wedding feast or an intimate gathering, Sara Mahal’s catering ensures a delicious and memorable dining experience for every occasion.',
+        icon: 'images/icons/5.png',
+        image: 'images/gallery/candid (130).webp'
+      },
+      'decoration': {
+        title: 'Decoration',
+        desc: 'Transform your event space with Sara Mahal’s exquisite decoration services. We specialize in mandapam setups, floral arrangements, and themed decor to create a breathtaking ambiance for your ceremonies. Our creative team works closely with you to reflect your style and traditions, making your celebration truly unique and visually stunning.',
+        icon: 'images/icons/2.png',
+        image: 'images/gallery/candid (88).webp'
+      },
+      'celebrant': {
+        title: 'Celebrant Services',
+        desc: 'Ensure your wedding or special ceremony is conducted with grace and authenticity. Sara Mahal provides experienced celebrants who honor your cultural customs and rituals, guiding you through every step of the ceremony with reverence and care. Let us help you create meaningful memories that last a lifetime.',
+        icon: 'images/icons/3.png',
+        image: 'images/gallery/candid (13).webp'
+      },
+      'photography': {
+        title: 'Photography',
+        desc: 'Capture every precious moment with Sara Mahal’s professional photography services. Our skilled photographers use state-of-the-art equipment to document your event in vivid detail, ensuring you have beautiful memories to cherish forever. From candid shots to group portraits, we cover every aspect of your celebration.',
+        icon: 'images/icons/7.png',
+        image: 'images/gallery/RAH09999A (2128).webp'
+      },
+      'priest': {
+        title: 'Priest Arrangements',
+        desc: 'Sara Mahal assists you in arranging experienced priests for your traditional ceremonies. We ensure all rituals are performed according to your customs, providing guidance and support throughout the process. Our priest arrangement service brings peace of mind and authenticity to your special day.',
+        icon: 'images/icons/6.png',
+        image: 'images/gallery/candid (331).webp'
+      }
+    };
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('service-modal');
+  const closeBtn = document.querySelector('.service-modal-close');
+  document.querySelectorAll('.service-popup').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      const key = el.getAttribute('data-service');
+      const data = serviceData[key];
+      if (data) {
+        document.getElementById('service-modal-title').textContent = data.title;
+        document.getElementById('service-modal-desc').textContent = data.desc;
+        document.getElementById('service-modal-icon').src = data.icon;
+        document.getElementById('service-modal-image').src = data.image;
+        modal.style.display = 'flex';
+      }
+    });
+  });
+  closeBtn.onclick = function() { modal.style.display = 'none'; };
+  window.onclick = function(event) { if (event.target === modal) { modal.style.display = 'none'; } };
+});
+</script>
 
 </body>
 

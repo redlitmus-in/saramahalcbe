@@ -1,5 +1,5 @@
  /* --------------------------------------------------
-  * © Copyright 2024 - Dentia by Designesia
+  * © Copyright 2025 - Dentia by Designesia
   * --------------------------------------------------*/
 (function($) {
 	'use strict';

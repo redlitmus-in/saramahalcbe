@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Catalog - Sara Mahal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/faviconsaramahal.png" type="image/png" sizes="16x16">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f6ff;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        .catalog-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+            background: url('images/catalogbg.jpg') center center/cover no-repeat;
+            position: relative;
+        }
+        .catalog-section::before,
+        .catalog-section::after {
+            content: none !important;
+            display: none !important;
+        }
+        .catalog-row {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(224,169,4,0.04);
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            min-height: 120px;
+            border: 1px solid #ececec;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .catalog-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-right: 24px;
+            box-shadow: none;
+            border: none;
+            background: #f3f3f3;
+        }
+        .catalog-content {
+            flex: 1;
+            padding: 0;
+        }
+        .catalog-content h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            color: #179c6a;
+            text-transform: uppercase;
+        }
+        .catalog-content ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+        .catalog-content ul li {
+            margin-bottom: 5px;
+            font-size: 1.01rem;
+            color: #222;
+            font-weight: 400;
+        }
+        .wedding-premium-border {
+            border: 1.5px solid #e7c873 !important;
+            box-shadow: none !important;
+        }
+        @keyframes shimmer {
+            0% { box-shadow: 0 8px 32px rgba(231,200,115,0.10); }
+            50% { box-shadow: 0 8px 48px rgba(231,200,115,0.18); }
+            100% { box-shadow: 0 8px 32px rgba(231,200,115,0.10); }
+        }
+        .btn-main {
+            background: linear-gradient(90deg, #e7c873 0%, #fffbe6 100%);
+            color: #6d5c2c;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            padding: 10px 28px;
+            box-shadow: 0 2px 8px rgba(191,161,74,0.08);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+        .btn-main:hover, .btn-main:focus {
+            background: linear-gradient(90deg, #fffbe6 0%, #e7c873 100%);
+            color: #bfa14a;
+            box-shadow: 0 4px 16px rgba(191,161,74,0.16);
+        }
+        @media (max-width: 768px) {
+            .catalog-row {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 8px;
+                min-height: unset;
+                max-width: 98vw;
+            }
+            .catalog-img {
+                width: 100%;
+                height: 120px;
+                margin: 0 0 10px 0;
+            }
+            .catalog-content { padding: 14px 0; }
+            .wedding-premium-border:before { width: 44px; height: 44px; top: -20px; }
+        }
+        .mandala-corner {
+            position: fixed;
+            width: 200px;
+            opacity: 0.3;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .mandala-top-right {
+            top: 0;
+            right: 0;
+        }
+        .mandala-bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        @media (max-width: 900px) {
+            .mandala-corner {
+                width: 120px;
+            }
+        }
+        @media (max-width: 600px) {
+            .mandala-corner {
+                width: 70px;
+                opacity: 0.12;
+            }
+        }
+        /* Ensure content is above mandalas */
+        #content, footer, header { position: relative; z-index: 2; }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+        <!-- preloader begin -->
+        <div id="de-loader"></div>
+        <!-- preloader end -->
+        <!-- header begin -->
+        <header class="transparent header-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images/icon.png" alt="Sara Mahal" >
+                                        <img class="logo-scroll" src="images/icon.png" alt="Sara Mahal" >
+                                        <img class="logo-mobile" src="images/icon.png" alt="Sara Mahal" >
+                                    </a>
+                                </div>
+                                <!-- logo end -->
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainemenu begin -->
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="index.html">Home</a></li>
+                                    <li><a class="menu-item" href="about.html">About Us</a></li>
+                                    <li><a class="menu-item" href="grand-hall.html">Grand Hall</a></li>
+                                    <li><a class="menu-item" href="classic-hall.html">Classic Hall</a></li>
+                                    <li><a class="menu-item" href="gallery.html">Gallery</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+                                    <li><a class="menu-item active" href="catalog.html">Catalog</a></li>
+                                </ul>
+                                <!-- mainmenu end -->
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="contact.html" class="btn-main fx-slide"><span>Book a Visit</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                                <div id="btn-extra">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- Decorative Mandala Images -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <section id="subheader" class="bg-color-op-1 text-light" data-bgimage="url(images/background/2.webp)">
+                <div class="container relative z-2">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <h1 class="wow fadeInUp">Event Catalog</h1>
+                            <div class="de-decor-1 wow fadeInUp"></div>
+                            <ul class="crumb wow fadeInDown">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Catalog</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <main class="catalog-section">
+                <div class="container">
+                    <div class="wedding-premium-border catalog-row">
+                        <img src="images/gallery/DSC09834.webp" alt="Wedding & Reception" class="catalog-img">
+                        <div class="catalog-content">
+                            <h3>Wedding & Reception</h3>
+                            <ul>
+                                <li>Professional Service Team</li>
+                                <li>Hygienic & Healthy Food</li>
+                                <li>Multi-Cuisine Menus</li>
+                                <li>Live Counters</li>
+                                <li>Attractive Vegetables & Fruits Carving</li>
+                                <li>All Type of Supporting Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog-row">
+                        <img src="images/gallery/candid (1).webp" alt="Seemantham" class="catalog-img">
+                        <div class="catalog-content">
+                            <h3>Seemantham</h3>
+                            <ul>
+                                <li>Seemandham Seer Plates</li>
+                                <li>Valaikappu Variety Menus</li>
+                                <li>Valaikappu Traditional Sweets & Savouries</li>
+                                <li>Live Art and Mehendi</li>
+                                <li>Other Supporting Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog-row">
+                        <img src="images/gallery/DSC09842.webp" alt="House Warming" class="catalog-img">
+                        <div class="catalog-content">
+                            <h3>House Warming</h3>
+                            <ul>
+                                <li>Variety of Dishes</li>
+                                <li>Thoranam & Panthal / Shamiana</li>
+                                <li>Attractive Dining Arrangements</li>
+                                <li>Lighting Arrangements</li>
+                                <li>Thamboolam Bags</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog-row">
+                        <img src="images/gallery/candid (24).webp" alt="Birthday & Anniversary" class="catalog-img">
+                        <div class="catalog-content">
+                            <h3>Birthday & Anniversary</h3>
+                            <ul>
+                                <li>Kids Attractive Menus</li>
+                                <li>Theme Based Decoration</li>
+                                <li>Cakes & Pastries</li>
+                                <li>Welcome Drinks & Starters</li>
+                                <li>Multi-Cuisine Menus</li>
+                                <li>DJ Arrangements</li>
+                                <li>Games & Magic Shows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- content close -->
+        <footer class="section-dark">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="images/icon.png" class="logo-footer" alt="" >
+                        <div class="spacer-20"></div>
+                        <p>At Sara Mahal, we’re dedicated to providing high-quality, personalized event experiences. Our skilled team uses modern amenities to ensure comfortable, efficient, and beautiful celebrations for life's most important moments.</p>
+                        <div class="social-icons mb-sm-30">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="widget">
+                                    <h5>Quick Links</h5>
+                                    <ul>                                        
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="grand-hall.html">Grand Hall</a></li>
+                                        <li><a href="classic-hall.html">Classic Hall</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="widget">
+                                    <h5>Our Services</h5>
+                                    <ul>
+                                        <li><a href="#" class="service-popup" data-service="event-management">Event Management</a></li>
+                                        <li><a href="#" class="service-popup" data-service="catering">Catering</a></li>
+                                        <li><a href="#" class="service-popup" data-service="decoration">Decoration</a></li>
+                                        <li><a href="#" class="service-popup" data-service="celebrant">Celebrant Services</a></li>
+                                        <li><a href="#" class="service-popup" data-service="photography">Photography</a></li>
+                                        <li><a href="#" class="service-popup" data-service="priest">Priest Arrangements</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
+                        <div class="widget">
+                            <h5>Contact Us</h5>
+                            <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color"></i>Venue Location</div>
+                            Sara Mahal, Kinathukadavu, Coimbatore
+                            <div class="spacer-20"></div>
+                            <div class="fw-bold text-white"><i class="icofont-phone me-2 id-color"></i>Call Us</div>
+                            +91 9486588288
+                            <div class="spacer-20"></div>
+                            <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color"></i>Send a Message</div>
+                            info@saramahal.com                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                <div class="de-flex-col">
+                                    Copyright 2025 - Sara Mahal by Redlitmus Communications India Pvt Ltd
+                                </div>
+                                <ul class="menu-simple">
+                                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM fully loaded and parsed');
+      const topRight = document.querySelector('.mandala-top-right');
+      const bottomLeft = document.querySelector('.mandala-bottom-left');
+      if (topRight) {
+        console.log('Top-right mandala image found:', topRight.src);
+        topRight.onload = function() {
+          console.log('Top-right image loaded:', topRight.src, 'Size:', topRight.naturalWidth, 'x', topRight.naturalHeight);
+        };
+        topRight.onerror = function() {
+          console.error('Top-right image failed to load:', topRight.src);
+        };
+      } else {
+        console.warn('Top-right mandala image NOT found in DOM');
+      }
+      if (bottomLeft) {
+        console.log('Bottom-left mandala image found:', bottomLeft.src);
+        bottomLeft.onload = function() {
+          console.log('Bottom-left image loaded:', bottomLeft.src, 'Size:', bottomLeft.naturalWidth, 'x', bottomLeft.naturalHeight);
+        };
+        bottomLeft.onerror = function() {
+          console.error('Bottom-left image failed to load:', bottomLeft.src);
+        };
+      } else {
+        console.warn('Bottom-left mandala image NOT found in DOM');
+      }
+    });
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const topRight = document.querySelector('.mandala-top-right');
+      const bottomLeft = document.querySelector('.mandala-bottom-left');
+      if (topRight) {
+        topRight.style.transform = `translateY(${scrollY * 0.1}px)`;
+        console.log('Scroll event: topRight transform:', topRight.style.transform);
+      }
+      if (bottomLeft) {
+        bottomLeft.style.transform = `translateY(${-scrollY * 0.1}px)`;
+        console.log('Scroll event: bottomLeft transform:', bottomLeft.style.transform);
+      }
+    });
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image load error:', e.target.src);
+      }
+    }, true);
+    </script>
+</body>
+</html> 

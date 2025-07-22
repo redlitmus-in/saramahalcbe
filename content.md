@@ -481,7 +481,7 @@ inquiries promptly.
 • Address: Sara Mahal, [Insert Full Street Address], Kinathukadavu,
 Coimbatore, Tamil Nadu, [Insert PIN Code]
 • Phone: +91 98765 43210 | +91 91234 56789
-• Email: info@saramaahal.com
+• Email: info@saramahal.com
 • WhatsApp: +91 98765 43210
 VISIT US
 We encourage you to visit our venue to experience its ambiance and facilities
@@ -517,7 +517,7 @@ QUICK LINKS
 • Contact Us
 • Gallery
 Sara Mahal: Where Traditions Blossom and Memories are Made.
-© 2024 Sara Mahal. All rights reserved.
+© 2025 Sara Mahal. All rights reserved.
 STAY UPDATED
 Sign up for our newsletter to receive exclusive updates and special offers for
 your future events!
